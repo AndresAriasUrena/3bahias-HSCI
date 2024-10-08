@@ -38,46 +38,46 @@ export default function FirebaseMonitor() {
 
   if (error) {
     return (
-      <Card className="max-w-md mx-auto mt-4 bg-red-50">
+      <Card className="max-w-md mx-auto mt-4 bg-red-900">
         <CardContent className="p-4">
-          <p className="text-red-600">{error}</p>
+          <p className="text-red-200">{error}</p>
         </CardContent>
       </Card>
     );
   }
 
   return (
-    <Card className="max-w-md mx-auto mt-4">
-      <CardHeader className="bg-gray-50 border-b">
-        <h2 className="text-xl font-semibold">3 Bahías Monitor</h2>
+    <Card className="max-w-md mx-auto mt-4 bg-gray-900 border-gray-800">
+      <CardHeader className="border-b border-gray-800">
+        <h2 className="text-xl font-semibold text-gray-100">3 Bahías Monitor</h2>
       </CardHeader>
       <CardContent className="p-4 space-y-4">
         {data ? (
           <>
             <div className="flex items-center gap-2">
-              <Clock className="text-gray-500" size={20} />
+              <Clock className="text-gray-400" size={20} />
               <div>
-                <p className="text-sm text-gray-500">Fecha</p>
-                <p className="font-medium">{data.fecha}</p>
+                <p className="text-sm text-gray-400">Fecha</p>
+                <p className="font-medium text-gray-100">{data.fecha}</p>
               </div>
             </div>
             
             <div className="flex items-center gap-2">
-              <Activity className="text-gray-500" size={20} />
+              <Activity className="text-gray-400" size={20} />
               <div>
-                <p className="text-sm text-gray-500">Valor</p>
-                <p className="font-medium">{data.valor}</p>
+                <p className="text-sm text-gray-400">Valor</p>
+                <p className="font-medium text-gray-100">{data.valor}</p>
               </div>
             </div>
 
             {lastUpdated && (
-              <p className="text-sm text-gray-500 pt-2 border-t">
+              <p className="text-sm text-gray-400 pt-2 border-t border-gray-800">
                 Última actualización: {lastUpdated}
               </p>
             )}
           </>
         ) : (
-          <p className="text-center py-4">Cargando...</p>
+          <p className="text-center py-4 text-gray-300">Cargando...</p>
         )}
       </CardContent>
     </Card>
